@@ -1,0 +1,102 @@
+{
+    "event": {
+        "name": "Meet me at BoB",
+        "location": "104-108 Kings Rd, Reading RG1 3BY"
+    },
+    "themes": {
+        "star-wars": {
+            "name": "Galactic Rendezvous",
+            "banner": "https://mutanti.s3.eu-west-2.amazonaws.com/media/Generated+Image+November+06%2C+2025+-+1_54PM.png",
+            "fonts": {
+                "heading": "Orbitron",
+                "sans": "Lato"
+            },
+            "colors": {
+                "primary": "#00D4FF",
+                "secondary": "#FF4500",
+                "accent": "#A7BFE8",
+                "bgLight": "#0D1117",
+                "bgDark": "#010409",
+                "textBase": "#C9D1D9",
+                "textInverse": "#010409",
+                "border": "#005f73"
+            },
+            "animation": "animate-glow",
+            "chartColors": ["#00D4FF", "#FF4500", "#FFD700", "#A7BFE8", "#6A8FCF"],
+            "background": "starfield"
+        },
+        "the-matrix": {
+            "name": "Digital Nexus",
+            "banner": "https://mutanti.s3.eu-west-2.amazonaws.com/media/Generated+Image+November+06%2C+2025+-+1_55PM.png",
+            "fonts": {
+                "heading": "Orbitron",
+                "sans": "Lato"
+            },
+            "colors": {
+                "primary": "#00FF00",
+                "secondary": "#00AA00",
+                "accent": "#00FFFF",
+                "bgLight": "#0A0A0A",
+                "bgDark": "#000000",
+                "textBase": "#00FF00",
+                "textInverse": "#000000",
+                "border": "#008000"
+            },
+            "animation": "animate-subtle-pulse",
+            "chartColors": ["#00FF00", "#00AA00", "#007700", "#333333", "#FFFFFF"],
+            "background": "matrix"
+        },
+        "weatherspoons": {
+            "name": "The Cozy Nook",
+            "banner": "https://mutanti.s3.eu-west-2.amazonaws.com/media/Generated+Image+November+06%2C+2025+-+1_56PM.png",
+            "fonts": {
+                "heading": "Merriweather",
+                "sans": "Lato"
+            },
+            "colors": {
+                "primary": "#D1A65E",
+                "secondary": "#8B0000",
+                "accent": "#F5DEB3",
+                "bgLight": "#2C1A1A",
+                "bgDark": "#1A0F0F",
+                "textBase": "#F5DEB3",
+                "textInverse": "#1A0F0F",
+                "border": "#a07d46"
+            },
+            "animation": "animate-fade-in",
+            "chartColors": ["#D1A65E", "#8B0000", "#5C4033", "#A0522D", "#F5DEB3"],
+            "background": "cozy"
+        }
+    },
+    "products": [
+        {
+            "name": "Shipyard Pale Ale",
+            "price": 2.75
+        },
+        {
+            "name": "Strongbow Cider",
+            "price": 2.75
+        },
+        {
+            "name": "Birra Moretti",
+            "price": 4.25
+        },
+        {
+            "name": "Local Ale",
+            "price": 1.60
+        }
+    ],
+    "dates": [
+        "2025-11-10",
+        "2025-11-25"
+    ],
+    "start_time": "17:45",
+    "end_time": "23:55",
+    "registration": {
+        "name": "string",
+        "email": "email",
+        "date": "dates",
+        "ETA": "time",
+        "drink": "products"
+    }
+}

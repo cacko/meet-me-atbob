@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Theme colors are controlled by CSS variables
+              'primary': 'rgb(var(--color-primary) / <alpha-value>)',
+              'secondary': 'rgb(var(--color-secondary) / <alpha-value>)',
+              'accent': 'rgb(var(--color-accent) / <alpha-value>)',
+              'bg-light': 'rgb(var(--color-bg-light) / <alpha-value>)',
+              'bg-dark': 'rgb(var(--color-bg-dark) / <alpha-value>)',
+              'text-base': 'rgb(var(--color-text-base) / <alpha-value>)',
+              'text-inverse': 'rgb(var(--color-text-inverse) / <alpha-value>)',
+              'border-color': 'rgb(var(--color-border) / <alpha-value>)',
+            },
+            fontFamily: {
+              // Theme fonts are controlled by CSS variables
+              sans: ['var(--font-sans)', 'sans-serif'],
+              heading: ['var(--font-heading)', 'serif'],
+            },
+            keyframes: {
+              'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+               'subtle-pulse': { 
+                 '0%, 100%': { transform: 'scale(1)' }, 
+                 '50%': { transform: 'scale(1.03)' } 
+                },
+               'glow': {
+                  '0%, 100%': { 'text-shadow': '0 0 5px, 0 0 10px, 0 0 15px', 'box-shadow': '0 0 5px, 0 0 10px, 0 0 15px' },
+                  '50%': { 'text-shadow': '0 0 10px, 0 0 20px, 0 0 30px', 'box-shadow': '0 0 10px, 0 0 20px, 0 0 30px' },
+               },
+               'pop-in': {
+                  '0%': { transform: 'scale(0.5)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+               },
+            },
+            animation: {
+              'fade-in': 'fade-in 1s ease-out forwards',
+              'subtle-pulse': 'subtle-pulse 2.5s infinite ease-in-out',
+              'glow': 'glow 2.5s infinite ease-in-out',
+              'pop-in': 'pop-in 0.3s ease-out forwards',
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-sans antialiased">
+    <div id="root"></div>
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-storage-compat.js"></script> <!-- Added Storage SDK -->
+    <!-- Chart.js for Pie Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Firebase configuration
+      // IMPORTANT: Replace the following config with your own Firebase project's config.
+      // You can find this in your Firebase project settings -> General -> Your apps -> Firebase SDK snippet -> Config
+      const firebaseConfig = {
+          apiKey: "AIzaSyDp554m3FWLtR-DZTDof_YOuzn-il7EZ2Q",
+          authDomain: "meet-at-bob.firebaseapp.com",
+          projectId: "meet-at-bob",
+          storageBucket: "meet-at-bob.firebasestorage.app",
+          messagingSenderId: "286563889945",
+          appId: "1:286563889945:web:9e58107b4cead2ca414b88",
+          measurementId: "G-J4KGR0C373"
+
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // Expose firebase to the global scope for easy access in React components
+      window.firebase = firebase;
+    </script>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
